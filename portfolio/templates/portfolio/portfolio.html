@@ -2,14 +2,123 @@
 
 {% block title %}Portafolio{% endblock %}
 
-{% block background %}{% load static %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+{% block background %}{% load static %}{% static 'core/img/proyectos.jpg' %}{% endblock %}
 
 {% block headers %}
 <h1>Portafolio</h1>
-<span class="subheading">Currículo</span>
+<span class="subheading">Proyectos</span>
 {% endblock %}
 
 {% block content %}
+<div class="row project">  	
+			<div class="col-lg-3 col-md-4 offset-lg-1">
+				<img class="img-fluid" src="{% static 'core/img/cepatria.png' %}" alt="">
+			</div>
+			<div class="col-lg-7 col-md-8">
+				<h2 class="section-heading title">CEPatria (Proyecto Independiente)</h2>   
+			<p>Creación de página web a escuela preescolar privada CEPatria
+			<ul>
+				<li>Implementación de framework Django</li>
+				<li>SQL, SASS, Javascript, Bootstrap.</li>
+				<li>Implementación de apartado con publicaciones </li>
+			</ul></p>
+			<p><a href="#">Código Cerrado</a></p> 
+			</div>
+		</div>
+
+<div class="row project">  	
+			<div class="col-lg-3 col-md-4 offset-lg-1">
+				<img class="img-fluid" src="{% static 'core/img/impo.png' %}" alt="">
+			</div>
+			<div class="col-lg-7 col-md-8">
+				<h2 class="section-heading title">IMPO (Estadías Profesionales y trabajo de Tesina)</h2>   
+			<p>Creación de Sistema de Gestión del Instituto Mexicano de Psicooncologia (IMPO)
+			<ul>
+				<li>Módulos, Creación de matrícula automática, Alumnos, carreras, profesores, materias, horarios, becas, facturación, kárdex de alumno. Correlación de varios módulos</li>
+				<li>Implementación de framework Laravel 5.8</li>
+				<li>PHP, Bootstrap, HeidiSQL, SASS, Javascript.</li>
+			</ul></p>
+			<p><a href="https://gitlab.com/robertocapi/impotlx" target=”_blank>Repositorio Git</a></p> 
+			</div>
+		</div>
+
+<div class="row project">  	
+			<div class="col-lg-3 col-md-4 offset-lg-1">
+				<img class="img-fluid" src="{% static 'core/img/yotrabajo.jpg' %}" alt="">
+			</div>
+			<div class="col-lg-7 col-md-8">
+				<h2 class="section-heading title">YoTrabajo (Start Up, Proyecto Escolar, Fase Beta)</h2>   
+			<p>Creación de Sistema Startup “YoTrabajo”
+			<ul>
+				<li>Implementación de framework Django</li>
+				<li>SQL, SASS, Javascript.</li>
+				<li>Implementación de Chat en tiempo real. </li>
+			</ul></p>
+			<p><a href="https://github.com/JairHuerta/YoTrabajo" target=”_blank>Repositorio Git</a></p> 
+			</div>
+		</div>
+
+
+		
+
+		<div class="row project">  	
+			<div class="col-lg-3 col-md-4 offset-lg-1">
+				<img class="img-fluid" src="{% static 'core/img/cesvet.png' %}" alt="">
+			</div>
+			<div class="col-lg-7 col-md-8">
+				<h2 class="section-heading title">CeSVet (Proyecto Intregadora, cliente real)</h2>   
+			<p>Creación de Sitio de Comercio Electrónico para el establecimiento “CeSVet” Centro de Servicios Veterinarios
+			<ul>
+				<li>Implementación de framework Laravel 5.7</li>
+				<li>Blade PHP, HeidiSQL, SASS, Javascript.</li>
+				<li>Implementación de CRUD para productos y citas.  </li>
+			</ul></p>
+			<p><a href="https://github.com/JairHuerta/cesvet" target=”_blank>Repositorio Git</a></p> 
+			</div>
+		</div>
+
+		<div class="row project">  	
+			<div class="col-lg-3 col-md-4 offset-lg-1">
+				<img class="img-fluid" src="{% static 'core/img/pixel.png' %}" alt="">
+			</div>
+			<div class="col-lg-7 col-md-8">
+				<h2 class="section-heading title">Pixel Imprenta (Proyecto Intregadora, cliente real)</h2>   
+			<p>Creación de sistema de gestión para el establecimiento de Diseño Gráfico “Pixel”
+			<ul>
+				<li>HTML5 + CSS3 + Bootstrap</li>
+				<li>PHP, Javascript y BD en SQL</li>
+				<li>Iimplementación de CRUD para productos.  </li>
+			</ul></p>
+			<p><a href="https://gitlab.com/SebasShogun/pixelwebsystem" target=”_blank>Repositorio Git</a></p> 
+			</div>
+		</div>
+
+		<div class="row project">  	
+			<div class="col-lg-3 col-md-4 offset-lg-1">
+				<img class="img-fluid" src="{% static 'core/img/moka2.png' %}" alt="">
+			</div>
+			<div class="col-lg-7 col-md-8">
+				<h2 class="section-heading title">MOKA Pastelería (Proyecto Freelance)</h2>   
+			<p>Creación de video de menú loop para propaganda interna
+			<ul>
+				<li>Photoshop, Premiere, Filmora</li>
+				<li>Video sin sonido e interactivo</li>
+			</ul></p>
+			</div>
+		</div>
+		<br><br><br>
+	
+
+
+		<div class="col-lg-7 col-md-8">
+		<span>Banner Photo by <a href="https://unsplash.com/@kellysikkema?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target=”_blank>Kelly Sikkema</a> on <a href="https://unsplash.com/s/photos/scrum?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target=”_blank>Unsplash</a></span>
+		</div>
+
+
+
+{% endblock %}
+
+{% comment %} {% block content %}
 	{% for project in projects %}
 		<!-- Proyecto -->
 		<div class="row project">  	
@@ -25,4 +134,5 @@
 			</div>
 		</div>
 	{% endfor %}
-{% endblock %}
+{% endblock %} {% endcomment %}
+
